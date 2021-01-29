@@ -1,7 +1,7 @@
 {
     "name": "Websale",
     "short_name": "Websale",
-    "start_url": "/",
+    "start_url": ".",
     "display": "standalone",
     "background_color": "#FFFFFF",
     "theme_color": "#3E64FF",
