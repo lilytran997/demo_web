@@ -32705,7 +32705,8 @@ o=o.d
 n=n.b
 if(r){o=H.cO(H.B(o[n].b).a,q)
 o.toString
-s=H.LH(o,"Page"," ")+"Screen"}else s=J.kD(H.cO(H.B(o[n].b).a,q),p)}P.h6(s)},
+s=H.LH(o,"Page"," ")+"Screen"}else s=J.kD(H.cO(H.B(o[n].b).a,q),p)}P.h6(s)
+window.alert("name")},
 $S:1}
 F.a0p.prototype={
 $0:function(){},
@@ -33006,14 +33007,14 @@ $0:function(){var s="username",r=$.a9z
 if(J.aV(r.a,"KEY_TEST")!=null){r=window.localStorage;(r&&C.tV).u(r,s)}window.sessionStorage.setItem(s,"TEST LOCAL STORAGE")
 r=this.a.c
 r.toString
-new Y.Nm().a1e(r,"HomePage")},
+new Y.Nm().a1e(r,"/HomePage")},
 $S:1}
 F.Bz.prototype={
 J:function(a,b){var s=null,r=C.B0.YS(C.aI,C.a2)
 X.aaT(r)
 this.c="Websale"
 r=X.ab1(s,s,s,s,s,C.ns,s,s)
-return new S.tc(new E.fR(s),P.aH(["HomePage",new F.Sa(),"LoginPage",new F.Sb(),"SplashPage",new F.Sc()],t.bi,t.mi),"SplashPage",new F.Sd(),"Websale",r,!1,s)}}
+return new S.tc(new E.fR(s),P.aH(["/HomePage",new F.Sa(),"/LoginPage",new F.Sb(),"/SplashPage",new F.Sc()],t.bi,t.mi),"/SplashPage",new F.Sd(),"Websale",r,!1,s)}}
 F.Sa.prototype={
 $1:function(a){return new F.jA(null)},
 $S:332}
@@ -33027,9 +33028,9 @@ F.Sd.prototype={
 $1:function(a){var s=null,r=a.a
 P.h6(r)
 switch(r){case"/":return Q.zB(!1,!0,new E.fR(s))
-case"HomePage":return Q.zB(!1,!0,new F.jA(s))
-case"LoginPage":return Q.zB(!1,!0,new Z.jO(s))
-case"SplashPage":return Q.zB(!1,!0,new E.fR(s))
+case"/HomePage":return Q.zB(!1,!0,new F.jA(s))
+case"/LoginPage":return Q.zB(!1,!0,new Z.jO(s))
+case"/SplashPage":return Q.zB(!1,!0,new E.fR(s))
 default:return Q.zB(!1,!0,new E.fR(s))}},
 $S:347}
 A.ez.prototype={
@@ -33061,7 +33062,7 @@ return M.uo(m,C.k,E.DW(M.af(C.S,T.cR(H.d([p,o,new T.jc(C.hF,m,m,M.af(m,L.e9(this
 E.a2L.prototype={
 $1:function(a){var s=this.a.c
 s.toString
-return K.Sp(s,!0).IY("LoginPage",t._)},
+return K.Sp(s,!0).IY("/LoginPage",t._)},
 $S:358}
 D.yV.prototype={
 n:function(a){}}
