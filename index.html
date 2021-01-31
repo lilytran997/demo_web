@@ -30,7 +30,7 @@
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('flutter-first-frame', function () {
-        navigator.serviceWorker.register('flutter_service_worker.js?v=1594747279');
+        navigator.serviceWorker.register('flutter_service_worker.js?v=1281431369');
       });
     }
   </script>
@@ -54,11 +54,11 @@
    };
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
-    var messaging = firebase.messaging()
-    messaging.usePublicVapidKey('AIzaSyD9vsX5169zjv6GYsdzg6SaqJSMWz89c28');
-    messaging.getToken().then((currentToken) => {
-    console.log(currentToken)
-    })
+<!--    var messaging = firebase.messaging()-->
+<!--    messaging.usePublicVapidKey('AIzaSyD9vsX5169zjv6GYsdzg6SaqJSMWz89c28');-->
+<!--    messaging.getToken().then((currentToken) => {-->
+<!--    console.log(currentToken)-->
+<!--    })-->
   </script>
   <script src="main.dart.js?version=1.1.10" type="application/javascript"></script>
 </body>
