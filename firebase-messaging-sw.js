@@ -31,36 +31,10 @@ messaging.setBackgroundMessageHandler(function(payload){
         });
     return promiseChain;
 });
-messaging.requestPermission().then(function(){
-  console.log('Notification permission granted.');
-//   TODO(developer): Retrieve an Instance ID token for use with FCM.
-//   ...
-  console.log(messaging.getToken());
-}).then(function(token){
-  console.log('token: ', token);
-  console.log(token);
-}).catch(function(err) {
-  console.log('Unable to get permission to notify.', err);
-});
-
-messaging.getToken({vapidKey: 'BEGtF1_ZIcyi_dQlol1Sj9Es2vOhzEc0RedOEz26eRzYSJIgMo7NDZuPa3GsBPJ9936PXj5huuUqmeENzzZVlAg'}).then((currentToken) => {
-  if (currentToken) {
-    // Send the token to your server and update the UI if necessary
-    // ...
-  } else {
-    // Show permission request UI
-    console.log('No registration token available. Request permission to generate one.');
-    // ...
-  }
-}).catch((err) => {
-  console.log('An error occurred while retrieving token. ', err);
-  // ...
-});
 self.addEventListener('notificationclick',function(event){
+   console.log('notification received: ', event)
   const clickedNotification = event.notification;
   clickedNotification.close();
-
-  // Do something as the result of the notification click
   const promiseChain = doSomething();
   event.waitUntil(promiseChain);
 });
