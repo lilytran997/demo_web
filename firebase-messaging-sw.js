@@ -31,13 +31,11 @@ messaging.setBackgroundMessageHandler(function(payload){
 //        });
 //    return promiseChain;
   console.log("backgroundMessage")
-
   const title = payload.notification.title;
-             const options = {
-                 body: payload.notification.score
-               };
+  const options = {body: payload.notification.score};
   return self.registration.showNotification(title, options);
 });
+
 self.addEventListener('notificationclick',function(event){
    console.log('notification received: ', event)
   const clickedNotification = event.notification;
