@@ -53,10 +53,10 @@
   <script>
      if ('serviceWorker' in navigator) {
       window.addEventListener('flutter-first-frame', function () {
-        navigator.serviceWorker.register('flutter_service_worker.js?v=2522832397');
+        navigator.serviceWorker.register('flutter_service_worker.js?v=7748194');
       });
        window.addEventListener('load', function () {
-        navigator.serviceWorker.register('/firebase-messaging-sw.js?v=1.1.5');
+        navigator.serviceWorker.register('/firebase-messaging-sw.js?v=1.1.6');
       });
       const messaging = firebase.messaging();
       messaging.requestPermission().then(() => {
@@ -82,6 +82,6 @@
             })
     }
   </script>
-  <script src="main.dart.js?version=1.2.1" type="application/javascript"></script>
+  <script src="main.dart.js?version=1.2.2" type="application/javascript"></script>
 </body>
 </html>
