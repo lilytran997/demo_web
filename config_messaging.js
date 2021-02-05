@@ -22,8 +22,10 @@ const messaging = firebase.messaging();
    })
    messaging.onMessage(function(payload){
             window.state = {
-                body: payload.notification.body
-                title: payload.notification.title
+                 body: payload.notification.body
+            }
+            window.state = {
+                  title: payload.notification.title
             }
             console.log('Message received in javascript: ', payload);
             const title = payload.notification.title;
