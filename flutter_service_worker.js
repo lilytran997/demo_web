@@ -39,8 +39,8 @@ const RESOURCES = {
 "firebase-messaging-sw.js": "3f5ba1c8ed531ad15eeeb661e8779206",
 "icons/Icon-192.png": "efb19cf9a28c0f07e419e03b5f58e4ae",
 "icons/Icon-512.png": "a0e78bed8839a0306e1df0bd78294f1f",
-"index.html": "753688f0aee112f804b6145fb003d0f5",
-"/": "753688f0aee112f804b6145fb003d0f5",
+"index.html": "c3c8659c3fb4a1640179ce5b1a6a58cb",
+"/": "c3c8659c3fb4a1640179ce5b1a6a58cb",
 "main.dart.js": "b49ab9642f46c19081feb1f5a41f373b",
 "manifest.json": "ef6f6868a3bebbac029cf2753bacec39",
 "version.json": "8972b18bec7fc8ff91e74c919e6dc4a8"
