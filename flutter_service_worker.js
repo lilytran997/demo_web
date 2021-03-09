@@ -3,7 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "878ad0a24a596821f17aa9c21dc41c5e",
+  "assets/AssetManifest.json": "fb4cf44459b1c90a6bdc3b903f9658ac",
 "assets/assets/ic-close.png": "8fe6ce1e7dc099dc834fe41b9ceb2826",
 "assets/assets/ic-main-checklist.png": "7837fd47f3ceeb9492cb166e8bd9de0b",
 "assets/assets/ic-main-customers-disable.png": "37b83b990356f119c889e6827a5f60c3",
@@ -28,20 +28,19 @@ const RESOURCES = {
 "assets/assets/logo-mobisale.png": "2b6d68bc3a7a1c70fcff614d9d358aae",
 "assets/assets/selfie-ellipse.png": "6f404a528100f06542dbfbbf4f07e50c",
 "assets/assets/splash_background.png": "026ebaf896ab1c21b8b920d25f9ca365",
-"assets/FontManifest.json": "de3a5ec6340c657102a308dc6ca2894e",
+"assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
 "assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac",
-"assets/NOTICES": "f3d40bfae27d8f043fda45ad3684c83d",
+"assets/NOTICES": "c07a47318819ce9ed3eaa7d5b628330e",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
-"assets/packages/flutter_markdown/assets/logo.png": "67642a0b80f3d50277c44cde8f450e50",
-"assets/packages/open_iconic_flutter/assets/open-iconic.woff": "3cf97837524dd7445e9d1462e3c4afe2",
+"assets/packages/wakelock_web/assets/no_sleep.js": "7748a45cd593f33280669b29c2c8919a",
 "config_messaging.js": "b2b5f75f9f34b94ebbe29b0c077dc106",
 "favicon.png": "1038c5e2ef67d1bd710d21ccc5ef4237",
 "firebase-messaging-sw.js": "3f5ba1c8ed531ad15eeeb661e8779206",
 "icons/Icon-192.png": "efb19cf9a28c0f07e419e03b5f58e4ae",
 "icons/Icon-512.png": "a0e78bed8839a0306e1df0bd78294f1f",
-"index.html": "1dc5ef2003f94abc729863d927f8b38b",
-"/": "1dc5ef2003f94abc729863d927f8b38b",
-"main.dart.js": "feee9a394d36db37093b8ea503705699",
+"index.html": "1e964cbb255f1ac4fc6327a3b90d78a3",
+"/": "1e964cbb255f1ac4fc6327a3b90d78a3",
+"main.dart.js": "f50769c60ca4d3fa9e4173730b36d97f",
 "manifest.json": "ef6f6868a3bebbac029cf2753bacec39",
 "version.json": "8972b18bec7fc8ff91e74c919e6dc4a8"
 };
@@ -61,7 +60,7 @@ self.addEventListener("install", (event) => {
   return event.waitUntil(
     caches.open(TEMP).then((cache) => {
       return cache.addAll(
-        CORE.map((value) => new Request(value + '?revision=' + RESOURCES[value], {'cache': 'reload'})));
+        CORE.map((value) => new Request(value, {'cache': 'reload'})));
     })
   );
 });
@@ -187,7 +186,7 @@ async function downloadOffline() {
     }
     currentContent[key] = true;
   }
-  for (var resourceKey in Object.keys(RESOURCES)) {
+  for (var resourceKey of Object.keys(RESOURCES)) {
     if (!currentContent[resourceKey]) {
       resources.push(resourceKey);
     }
